@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Despesas - Modo Desktop</title>
+    
+
+    <link rel="icon" href="icon.png" type="image/png">
+    
+   
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        html, body { 
+            height: 100%; 
+            width: 100%; 
+            overflow: hidden; 
+            background: #2c3e50;
+        }
+
+        .header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            height: 40px;
+        }
+
+        /* Container que permite o scroll em todas as direções */
+        .wrapper {
+            width: 100vw;
+            height: calc(100vh - 40px);
+            overflow: auto; 
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Forçamos o iframe a ser GRANDE (como num PC) */
+        iframe {
+            width: 1280px; /* Largura de um monitor comum */
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Dica visual para o usuário */
+        .instrucao {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 10px;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <link rel="image" href="icon.png">
+
+    <div class="header">MODO DESKTOP ATIVADO</div>
+
+    <div class="wrapper">
+        <iframe 
+            src="https://docs.google.com/spreadsheets/d/1OuCJaP_vChziQDIkcStqzxGS0nIdgmT-z1eY8jEoV-A/edit?rm=minimal" 
+            scrolling="yes">
+        </iframe>
+    </div>
+
+    <div class="instrucao">Arraste para os lados para ver a tabela toda</div>
+
+</body>
+</html>
